@@ -1,0 +1,97 @@
+@import 'theme-default';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 1140px;
+    margin: 50px auto 0;
+}
+.menu{
+    background-color: $tomato-color;
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li{
+            display: inline-block;
+            position: relative;
+            a{
+                text-decoration: none;
+                color: $black-color;
+                display: inline-block;
+                border-right: 1px solid $black-color;
+                padding: 10px;
+                
+                
+            }
+        &:hover ul.submenu{
+            visibility: visible;
+            opacity: 1;
+            top: 100%;
+            left: 0;
+
+        } 
+        &:hover > a{
+                background-color: $green-color;
+                color: $white-color;
+            }
+        
+        ul.submenu{
+                width: 150px;
+                position: absolute;
+                top: 170%;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: .5s;
+                background-color: $black-color;
+                li{
+                    display: block;
+                    a{
+                        color: $white-color;
+                        display: block;
+                        border-bottom: 1px solid $white-color;
+                        border-right: 0px solid $white-color;
+                        &:hover {
+                            background-color: $tomato-color; 
+                        }
+                    }
+                }
+            }
+            .mega-menu{
+                width: 400px;
+                position: absolute;
+                top: 170%;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                transition: .5s;
+                background-color: $tomato-color;
+                ul{
+                    width: 50%;
+                    float: left;
+                    li{
+                        display: block;
+                        margin: 5px;
+                        a{
+                           border-bottom: 1px solid $white-color;
+                        border-right: 0px solid $white-color;
+                            display: block;
+                        }
+                        
+                        
+                    }
+                }
+            }
+            &:hover .mega-menu{
+                visibility: visible;
+                opacity: 1;
+                top: 100%;
+                left: 0;
+
+            }
+        }
+    }
+}

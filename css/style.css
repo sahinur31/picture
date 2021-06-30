@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 1140px;
+  margin: 50px auto 0; }
+
+.menu {
+  background-color: tomato; }
+  .menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .menu ul li {
+      display: inline-block;
+      position: relative; }
+      .menu ul li a {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        border-right: 1px solid black;
+        padding: 10px; }
+      .menu ul li:hover ul.submenu {
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+        left: 0; }
+      .menu ul li:hover > a {
+        background-color: green;
+        color: white; }
+      .menu ul li ul.submenu {
+        width: 150px;
+        position: absolute;
+        top: 170%;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        background-color: black; }
+        .menu ul li ul.submenu li {
+          display: block; }
+          .menu ul li ul.submenu li a {
+            color: white;
+            display: block;
+            border-bottom: 1px solid white;
+            border-right: 0px solid white; }
+            .menu ul li ul.submenu li a:hover {
+              background-color: tomato; }
+      .menu ul li .mega-menu {
+        width: 400px;
+        position: absolute;
+        top: 170%;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        transition: .5s;
+        background-color: tomato; }
+        .menu ul li .mega-menu ul {
+          width: 50%;
+          float: left; }
+          .menu ul li .mega-menu ul li {
+            display: block;
+            margin: 5px; }
+            .menu ul li .mega-menu ul li a {
+              border-bottom: 1px solid white;
+              border-right: 0px solid white;
+              display: block; }
+      .menu ul li:hover .mega-menu {
+        visibility: visible;
+        opacity: 1;
+        top: 100%;
+        left: 0; }
+
+/*# sourceMappingURL=style.css.map */
